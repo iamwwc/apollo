@@ -39,7 +39,9 @@ public class ReleaseController {
   private final NamespaceService namespaceService;
   private final MessageSender messageSender;
   private final NamespaceBranchService namespaceBranchService;
-
+  // 只有一个构造，autowired可选
+  // https://stackoverflow.com/questions/44356779/spring-boot-constructor-based-dependency-injection
+  // https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot.html#using-boot-spring-beans-and-dependency-injection
   public ReleaseController(
       final ReleaseService releaseService,
       final NamespaceService namespaceService,
